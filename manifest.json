@@ -1,0 +1,26 @@
+{
+    "name":"transum+",
+    "description": "yes, this is the second version",
+    "browser_action": {
+        "default_title": "transum+",
+        "default_popup": "browser.html"
+    },
+    "icons": { 
+        "16": "transum.png",
+        "48": "transum.png",
+       "128": "transum.png" 
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.transum.org/Trophies/Apply_Trophy.asp"],
+          "js": ["index.js"]
+        }
+    ],
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+    ],
+    "manifest_version":2,
+    "version":"6.9.4.20"
+}
